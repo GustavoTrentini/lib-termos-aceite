@@ -1,5 +1,5 @@
 <?php
-// MyVendor\formulario-contato\src\Models\FormularioContato.php
+
 namespace ApplySystem\TermosAceite\Models;
 
 use Illuminate\Database\Eloquent\Model;

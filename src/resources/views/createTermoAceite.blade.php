@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row my-2 mt-4">
             <div class="col-md-12 d-flex justify-content-center">
-                <img src="{{asset('images/termo_aceite.png')}}" alt="{{env('APP_NAME')}}" width="200">
+                <img src="{{env('APP_LOGO', false) ? asset(env('APP_LOGO')) : 'https://applysystem.com.br/site/wp-content/uploads/2019/03/logo-apply-site-seguro.png' }}" alt="{{env('APP_NAME')}}" width="200">
             </div>
         </div>
         <form action="{{route('termo.store')}}" method="POST">
@@ -27,7 +27,6 @@
                         <label for="my-textarea" class="h3">Digite os termos</label>
                         <textarea id="my-textarea" class="form-control" name="termoAceite" rows="15"></textarea>
                     </div>
-
                 </div>
                 <div class="col-md-3">
                     <div class="form-group">
