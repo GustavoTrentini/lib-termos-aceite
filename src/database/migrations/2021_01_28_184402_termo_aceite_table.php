@@ -14,13 +14,13 @@ class TermoAceiteTable extends Migration
     public function up()
     {
         Schema::create('termo_aceite', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
             $table->longText('termo', 5000);
             $table->bigInteger('user_id');
             $table->string('version');
             $table->timestamps();
         });
-        
+
     }
 
     /**
@@ -31,6 +31,6 @@ class TermoAceiteTable extends Migration
     public function down()
     {
         Schema::dropIfExists('termo_aceite');
-        
+
     }
 }
