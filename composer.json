@@ -1,6 +1,7 @@
 {
     "name": "applysystem/termosaceite",
     "description": "Pacote para criacao da aceitacao de termos de aceite conforme lgpd",
+    "license": "MIT",
     "authors": [{
         "name": "Apply System",
         "email": "contato@applysystem.com.br"
