@@ -41,9 +41,7 @@ class TermoAceiteController extends Controller
 
     public function termsAccepted(Request $request, $id){
 
-        return $request->all();
-
-        if($request->input('aceite')){
+        if($request->input('aceite') == "on"){
             $termoUser = TermosUsers::create([
                 'user_id' => Auth::user()->id,
                 'termo_id' => $id
