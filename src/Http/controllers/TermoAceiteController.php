@@ -57,8 +57,8 @@ class TermoAceiteController extends Controller
                 ]);
         }
         else{
-            //deslogar usuário
-            return "usuário deslogado";
+            Auth::logout();
+            return redirect('/');
         }
     }
 
