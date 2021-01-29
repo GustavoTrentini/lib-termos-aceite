@@ -1,8 +1,9 @@
 <?php
 
-namespace ApplySystem\TermosAceite\routes;
+namespace ApplySystem\TermosAceite\Routes;
 
 use ApplySystem\TermosAceite\Http\Controllers\TermoAceiteController;
+use Illuminate\Routing\Route;
 
 Route::group(['middleware' => ['web','auth']], function(){
     Route::get('termo/aceite', [TermoAceiteController::class, 'index'])->name('termo.aceite');
