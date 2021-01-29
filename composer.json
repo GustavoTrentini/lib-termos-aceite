@@ -1,0 +1,17 @@
+{
+    "name": "applysystem/termosaceite",
+    "description": "Pacote para criacao da aceitacao de termos de aceite conforme lgpd",
+    "authors": [{
+        "name": "Apply System",
+        "email": "contato@applysystem.com.br"
+    }],
+    "require": {
+      "php": ">=5.4.0"
+    },
+    "autoload": {
+      "psr-4": {
+        "ApplySystem\\TermosAceite\\": "src/"
+      }
+    },
+    "minimum-stability": "dev"
+  }
