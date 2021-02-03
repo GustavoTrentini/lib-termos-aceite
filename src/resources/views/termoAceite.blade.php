@@ -32,7 +32,7 @@
             <div class="row my-2">
                 <div class="col-md-12">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" required name="aceite" id="defaultCheck1">
+                        <input class="form-check-input" type="checkbox" required name="aceite" id="defaultCheck1" checked>
                         <label class="form-check-label" for="defaultCheck1">
                             Declaro que li e concordo com os termos acima.
                         </label>
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
-                <button class="btn btn-success btn-lg" type="submit">Aceitar termos de uso</button>
+                <button class="btn btn-success btn-lg" type="submit">Continuar</button>
             </div>
         </div>
     </form>
