@@ -40,9 +40,14 @@
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
+                <a class="btn btn-danger btn-lg mr-2" href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Recusar</a>
                 <button class="btn btn-success btn-lg" type="submit">Continuar</button>
             </div>
         </div>
+    </form>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
     </form>
     <!-- JavaScript (Opcional) -->
     <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
