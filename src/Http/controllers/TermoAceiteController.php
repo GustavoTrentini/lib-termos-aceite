@@ -22,7 +22,7 @@ class TermoAceiteController extends Controller
             ]);
         }
         else{
-            return view('termoAceite::createTermoAceite');
+            return view('/');
         }
     }
 
@@ -33,9 +33,13 @@ class TermoAceiteController extends Controller
     public function verify(TermosUsers $termosUsers, TermosAceite $termos){
 
         $termo = $termos->orderBy('id', 'DESC')->first();
-        $termoUser = $termosUsers->where('user_id', Auth::user()->id)->where('termo_id', $termo->id)->first();
 
-        return $termoUser ? redirect('/') : redirect()->route('termo.aceite');
+        if($termo){
+            $termoUser = $termosUsers->where('user_id', Auth::user()->id)->where('termo_id', $termo->id)->first();
+            return $termoUser ? redirect('/') : redirect()->route('termo.aceite');
+        } else {
+            return redirect()->route('termo.create');
+        }
 
     }
 
@@ -50,7 +54,7 @@ class TermoAceiteController extends Controller
             return $termoUser ?
                 redirect('/') :
                 redirect()->back()->with([
-                    'message' => 'erro ao cadastrar o termo de aceite',
+                    'message' => 'erro ao valida o termo de aceite',
                     'type' => 'danger'
                 ]);
         }
