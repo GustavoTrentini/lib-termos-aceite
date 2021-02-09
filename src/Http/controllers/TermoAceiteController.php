@@ -22,7 +22,7 @@ class TermoAceiteController extends Controller
             ]);
         }
         else{
-            return redirect('/');
+            return view('termoAceite::createTermoAceite');
         }
     }
 
